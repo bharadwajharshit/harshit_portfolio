@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harshit Bharadwaj - Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: "Inter", Arial, sans-serif; background: #f3f0ff; color: #222; }
+
+    /* Vibrant Header with Parallax */
+    header { 
+      height: 320px;
+      background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+    header h1 { font-size: 42px; font-weight: 800; }
+    header p { font-size: 18px; margin-top: 8px; }
+
+    /* Vibrant Navigation */
+    nav { 
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      background: linear-gradient(90deg,#ff6b6b,#f06595,#845ef7,#5c7cfa,#339af0);
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    nav a { color: white; font-weight: 600; text-decoration: none; transition: 0.3s; }
+    nav a:hover { opacity: 0.7; }
+
+    /* Parallax Section Wrapper */
+    .parallax-section {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      padding: 80px 0;
+      color: white;
+      text-shadow: 0 3px 10px rgba(0,0,0,0.4);
+      margin-bottom: 40px;
+    }
+
+    /* Content Sections */
+    section { 
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 25px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease;
+    }
+    h2 { font-size: 26px; color: #5f3dc4; margin-bottom: 10px; }
+    h3 { color: #364fc7; margin-top: 15px; }
+
+    ul { padding-left: 20px; }
+
+    .project { margin-bottom: 20px; }
+    footer { text-align: center; padding: 30px; background: #222; color: white; margin-top: 50px; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Harshit Bharadwaj</h1>
+  <p>Full-Stack Developer (MERN) • Transitioning to Python • 6+ Years Experience</p>
+  <p>📱 +91-9691578504 • <a href="mailto:bharadwajharshit@gmail.com" style="color:white;">bharadwajharshit@gmail.com</a></p>
+</header>
+
+<nav>
+  <a href="#skills">Technical Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="parallax-section" style="background-image:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c');">
+  <h2 style="text-align:center; font-size:32px;">Professional Summary</h2>
+</div>
+
+<section id="summary">
+  <p>Full-stack (MERN) developer with 6 years of experience building scalable, real-time web applications. Strong expertise in backend development, API design, real-time sockets, databases, payments, and cloud. Currently transitioning into Python while continuing full-stack development.</p>
+</section>
+
+<div class="parallax-section" style="background-image:url('https://images.unsplash.com/photo-1526378722484-c1a0cddfa6f1');">
+  <h2 style="text-align:center; font-size:32px;">Technical Skills</h2>
+</div>
+
+<section id="skills">
+  <ul>
+    <li><b>Languages:</b> JavaScript, Java (Basics), Python (Basics)</li>
+    <li><b>Frameworks:</b> ReactJS, NextJS, NodeJS, NestJS, Angular</li>
+    <li><b>Databases:</b> MySQL, PostgreSQL, MongoDB</li>
+    <li><b>Tools:</b> Git, VS Code, Linux/MacOS, Zapier</li>
+    <li><b>Cloud/Integrations:</b> AWS, Stripe, Blockchain</li>
+    <li><b>Methodologies:</b> Agile, Scrum</li>
+  </ul>
+</section>
+
+<div class="parallax-section" style="background-image:url('https://images.unsplash.com/photo-1535223289827-42f1e9919769');">
+  <h2 style="text-align:center; font-size:32px;">Experience</h2>
+</div>
+
+<section id="experience">
+  <h3>Software Developer II — Infowind Tech. Pvt. Ltd. (Jun 2025 – Present)</h3>
+  <p>Building admin panel for Wise Mind Nutrition app using NextJS + GraphQL.</p>
+
+  <h3>MERN Stack Developer — NoBorderz Tech Pvt. Ltd. (Apr 2022 – Jun 2025)</h3>
+  <ul>
+    <li>Developed REST APIs for NFT marketplace & metaverse platforms.</li>
+    <li>Real-time sockets for chat, meetings, and live interactions.</li>
+    <li>Database design & query optimization.</li>
+  </ul>
+
+  <h3>MERN Stack Developer — Webiwork Technologies Pvt. Ltd. (Nov 2019 – Apr 2022)</h3>
+  <ul>
+    <li>ReactJS web apps, NodeJS APIs, MySQL/MongoDB.</li>
+    <li>Stripe payments and 3rd-party integrations.</li>
+  </ul>
+
+  <h3>Earlier Roles (2015–2018)</h3>
+  <p>Business Development Executive, Development Engineer, Graduate Engineer Trainee.</p>
+</section>
+
+<div class="parallax-section" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475');">
+  <h2 style="text-align:center; font-size:32px;">Projects</h2>
+</div>
+
+<section id="projects">
+  <div class="project"><h3>Xana Metaverse</h3><p>Backend APIs, sockets for real-time meetings, database architecture for 50K+ users.</p></div>
+  <div class="project"><h3>Vanira Live Streaming Platform</h3><p>Live streaming APIs, real-time sockets, comments, gifts, scaling concurrency.</p></div>
+  <div class="project"><h3>Avatarchat Service</h3><p>Admin panel (NestJS), chatbot training module, ticketing system.</p></div>
+  <div class="project"><h3>Canvas Print</h3><p>ReactJS + NodeJS product customization platform, Stripe & Shopify integrations.</p></div>
+  <div class="project"><h3>Xanalia NFT Marketplace</h3><p>NextJS + NestJS NFT creation and trading with wallet integration.</p></div>
+</section>
+
+<div class="parallax-section" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');">
+  <h2 style="text-align:center; font-size:32px;">Contact</h2>
+</div>
+
+<section id="contact" class="contact">
+  <p>📧 Email: <a href="mailto:bharadwajharshit@gmail.com">bharadwajharshit@gmail.com</a></p>
+  <p>📱 Phone: <a href="tel:+919691578504">+91-9691578504</a></p>
+  <p>🔗 GitHub: <a href="https://github.com/bharadwajharshit" target="_blank">github.com/bharadwajharshit</a></p>
+  <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/harshit-bharadwaj-84343950" target="_blank">linkedin.com/in/harshit-bharadwaj-84343950</a></p>
+</section>
+
+<footer>© 2025 Harshit Bharadwaj — Professional Portfolio</footer>
+</body>
+</html>
