@@ -1,0 +1,12 @@
+/* Social Icons */
+.social-icon {
+    font-size: 2rem;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--primary);
+    transform: translateY(-5px) scale(1.1);
+    text-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+}
