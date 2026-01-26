@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    loadSharedComponents();
     // Typewriter Effect
     const typeTarget = document.querySelector('.hero-subtitle');
     if (typeTarget) {
@@ -129,4 +130,79 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    function loadSharedComponents() {
+        // Inject Nav
+        const nav = document.querySelector('nav');
+        if (nav) {
+            nav.innerHTML = `
+            <div class="nav-links">
+              <a href="index.html">Summary</a>
+              <a href="skills.html">Skills</a>
+              <a href="experience.html">Experience</a>
+              <a href="projects.html">Projects</a>
+              <a href="contact.html">Contact</a>
+            </div>
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            `;
+
+            // Active State
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = nav.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Init Mobile Nav
+            initMobileNav();
+        }
+
+        // Inject Footer
+        const footer = document.querySelector('footer');
+        if (footer) {
+            footer.innerHTML = `<p>© 2026 Harshit Bharadwaj</p>`;
+        }
+    }
+
+    // Mobile Navigation Logic
+    function initMobileNav() {
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const links = document.querySelectorAll('.nav-links a');
+
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                // Toggle Nav
+                navLinks.classList.toggle('nav-active');
+                hamburger.classList.toggle('toggle');
+
+                // Animate Links
+                links.forEach((link, index) => {
+                    if (link.style.animation) {
+                        link.style.animation = '';
+                    } else {
+                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                    }
+                });
+            });
+
+            // Close when clicking a link
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('nav-active');
+                    hamburger.classList.remove('toggle');
+
+                    links.forEach(link => {
+                        link.style.animation = '';
+                    });
+                });
+            });
+        }
+    }
 });
