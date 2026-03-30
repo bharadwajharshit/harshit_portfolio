@@ -380,6 +380,12 @@ section {
 }
 
 /* Layouts */
+.grid-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
 .grid-2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
